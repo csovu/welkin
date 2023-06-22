@@ -5,7 +5,7 @@ new Vue({
         return{
             output: {},
             userAddress:'',
-            message: 'Summer Breeze',
+            message: 'Welkin',
             latString:'',
             lngString:'',
             displayAddress: '',
