@@ -22,8 +22,8 @@
 <body>
     <div id="app">
         <header>
-        <p>{{message}}</p>
-        <p>Pollen Index</p>
+        <p id="name">{{message}}</p>
+        <p id="sub-name">Pollen Index</p>
         </header>
 
         <div class="custom-shape-divider-top-1687468086">
@@ -37,21 +37,34 @@
         <div id="site-intro">
             <p>Summer Breeze Pollen Index provides information on common grasses, weeds and trees that cause seasonal allergies. </p>
             <p>Those with severe allergies are recommended to stay indoors if a level is 3 or higher.</p>
-         
 
-            <p><strong>The pollen index is on a scale of 1-5:</strong>  </p>
+            <div class='my-legend'>
+                <div class='legend-title'>Pollen Severity </div>
+                <div class='legend-scale'>
+                  <ul class='legend-labels'>
+                    <li><span style='background:#F1EEF6;'></span>N/A</li>
+                    <li><span style='background:#9edf94;'></span>2</li>
+                    <li><span style='background:#f1e871;'></span>3</li>
+                    <li><span style='background:#f2a540;'></span>4</li>
+                    <li><span style='background:#b94829;'></span>5</li>
+                  </ul>
+                </div>
+                <div class='legend-source'>Source: <a href="https://breezometer.com/products/pollen-api">Breezo Meter</a></div>
+                </div>
+
+            <!-- <p><strong>The pollen index is on a scale of 1-5:</strong>  </p>
             <ul>
                <p><strong>0/1 </strong>- low/no allergen</p>
                 <p><strong>2</strong>- low allergen</p>
                 <p><strong>3</strong>- moderate allergen</p>
                 <p><strong>4</strong>- high allergen </p>
                <p><strong>5</strong>- severe allergen</p>
-            </ul>
+            </ul> -->
         </div>
         <p id="flower">🌻🌻🌻</p>
         <div id="location-info">
         <p id="location-header">Enter a location:</p>
-        <input id="location-box" type="text" v-model="userAddress" @keyup.enter="getLocation" placeholder="city, state">
+        <input id="location-box" type="text" v-model="userAddress" @click="getLocation" placeholder="city, state">
 
         </div>
 
